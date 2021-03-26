@@ -58,7 +58,7 @@ knit_hooks$set(output = function(x, options) {
 
 Show us that you have a `GitHub` account. Create a repository on `GitHub` called "36-350". (Utilize the checklist in `Notes_8A`.) Then edit the code below so that we see the contents of `README.md`. To get the correct URL, do the following: go to your `GitHub` repo, click on `36-350` and then again on `README.md`, and click on the "Raw" button. Copy and paste the URL to the raw `README.md` file into the call to `readLines()` below.
 ```{r linewidth=80}
-#readLines("Enter the URL to README.md here")
+readLines("https://raw.githubusercontent.com/binz777/36-350/main/README.md")
 ```
 
 ## Question 2
@@ -68,11 +68,8 @@ Show us that you have a `GitHub` account. Create a repository on `GitHub` called
 
 Show us that you have `Git` installed on your computer. Utilize the checklist in `Notes_8A` to create a new project within `RStudio` that is tied to your "36-350" repo on `GitHub`. Then follow the listed steps in `Notes_8A` to create a new `R Script` (and *not* an `R Markdown` file) in which you put `print("It was a dark and stormy night.")`. Save this file (call it `dark_and_stormy.R`) to your local "36-350" repo. Stage the file, commit the file (and add a commit message), and push the file to `GitHub`. (If when you try to commit you see an error referring to an `index.lock` file, try to commit again...I've seen such an error when trying to commit files on my machine and it appears to be a random occurrence.) Follow the steps that you followed in Q1 to find the URL to the raw file for `dark_and_stormy.R` and copy and paste that URL below in the call to `source_url()`. If everything works, "It was a dark and stormy night." should appear, along with a hash code that you can safely ignore.
 ```{r linewidth=80}
-if ( require("devtools") == FALSE ) {
-  install.packages("devtools",repos="https://cloud.r-project.org")
-  library(devtools)
-}
-#source_url("Enter the URL to dark_and_stormy.R here")
+library(devtools)
+source_url("https://raw.githubusercontent.com/binz777/36-350/main/dark_and_stormy.R")
 ```
 
 ## Question 3
@@ -82,8 +79,8 @@ if ( require("devtools") == FALSE ) {
 
 Following the instructions in `Notes_8A`, create a new branch both on `GitHub` and in your local project. Call it `new_branch`. Once you have done this, alter `dark_and_stormy.R` so that it prints "It was a dark and stormy night; the rain fell in torrents." Stage, commit, and push as you would have done in Q2. Source the `main` branch file as you did in Q2, and also source the `new_branch` file. If the output of the first does not include "the rain fell in torrents," while the output of the second one does include that phrase, you're good.
 ```{r linewidth=80}
-#source_url("Enter the URL to the main branch version of dark_and_stormy.R here")
-#source_url("Enter the URL to the new-branch version of dark_and_stormy.R here")
+source_url("Enter the URL to the main branch version of dark_and_stormy.R here")
+source_url("Enter the URL to the new-branch version of dark_and_stormy.R here")
 ```
 
 ## Question 4
